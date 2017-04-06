@@ -89,6 +89,7 @@ df['Bafta_Awards_Nominated']= df['Awards'].str.extract('Nominated for (\d+) BAFT
 
 # In[38]:
 
+# Retrieving only the required columns
 a = df[['Awards','Awards_Won','Awards_Nominated','GoldenGlobe_Awards_Won','GoldenGlobe_Awards_Nominated','Oscar_Awards_Won','Oscar_Awards_Nominated','Prime_Awards_Won','Prime_Awards_Nominated','Bafta_Awards_Won','Bafta_Awards_Nominated']]
 
 
@@ -99,11 +100,13 @@ a.head()
 
 # In[40]:
 
+# Replacing the value NaN for every cell t '0'
 final  = a.fillna(0)
 
 
 # In[41]:
 
+# Displaying the final output using head()
 final.head()
 
 
